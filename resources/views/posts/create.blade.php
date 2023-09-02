@@ -1,10 +1,7 @@
-<!DOCTYPE HTML>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Blog</title>
-    </head>
-    <body>
+<x-app-layout>
+    <x-slot name="header">
+        create
+    </x-slot>
         <h1>Blog Name</h1>
         <form action="/posts" method="POST">
             @csrf
@@ -31,5 +28,4 @@
         <div class="footer">
             <a href="/">戻る</a>
         </div>
-    </body>
-</html>
+</x-app-layout>
