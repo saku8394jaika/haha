@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title',50);
             $table->string('body',200);
             $table->string('image', 100)->nullable();
+            $table->foreignId('category_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
         });
